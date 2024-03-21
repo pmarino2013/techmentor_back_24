@@ -5,7 +5,7 @@ import dbConnection from "../database/config.js";
 class Server {
   constructor() {
     this.app = express();
-    this.port = 9001;
+    this.port = process.env.PORT;
     this.topicsPath = "/api/topics";
 
     this.router();
